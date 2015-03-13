@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{verbatim}
+
+\begin{document}
+
+\begin{equation}
+f(x) = \frac{1}{2}\left( Ax -b \right)^{T} \left( Ax -b \right) = \frac{1}{2}r^Tr
+\end{equation}
+
+\begin{equation}
+\nabla f(x) = A^{T}\left( Ax-b\right) = -A^T r
+\end{equation}
+
+\begin{eqnarray}
+x_{(1)} &=& x_{(0)}  - \alpha \nabla f(x_{(0)}) = \\
+&=& x_{(0)} + \alpha A^T r_{(0)}
+\end{eqnarray}
+
+\begin{eqnarray}
+\frac{d}{d\alpha} f(x_{(1)}) &=& f^{\prime}(x_{(1)})^T \frac{d}{d\alpha} x_{(1)} = \\
+&=& f^{\prime}(x_{(1)})^T A^T r_{(0)} = \\
+&=& (A^T r_{(1)})^T A^T r_{(0)} = \\
+&=&  r_{(1)}^T A A^T r_{(0)} = 0\\
+\end{eqnarray}
+
+\begin{eqnarray}
+r_{(1)}^T A A^T r_{(0)} &=& 0 \nonumber \\
+\left( b - A x_{(1)} \right)^T A A^T r_{(0)} &=& 0 \nonumber \\
+\left( b - A \left( x_{(0)} + \alpha A^T r_{(0)} \right) \right)^T A A^T r_{(0)} &=& 0 \nonumber \\
+\left( b - A x_{(0)} \right)^T A A^T r_{(0)} - \alpha \left(A A^T r_{(0)}\right)^T A A^T r_{(0)} &=& 0 \nonumber \\
+r_{(0)}^T A A^T r_{(0)} &=& \alpha \left(A A^T r_{(0)}\right)^T A A^T r_{(0)} \nonumber  \\
+r_{(0)}^T A A^T r_{(0)} &=& \alpha r_{(0)}^T A A^T A A^T r_{(0)} \nonumber \\
+\left( A ^T r_{(0)}\right)^T \left(A^T r_{(0)}\right) &=& \alpha \left(A^T r_{(0)}\right)^T A^T A \left(A^T r_{(0)}\right) \nonumber \\
+\alpha &=& \frac{\left( A ^T r_{(0)}\right)^T \left(A^T r_{(0)}\right) } {\left(A^T r_{(0)}\right)^T A^T A \left(A^T r_{(0)}\right)} \nonumber
+\end{eqnarray}
+
+\end{document}
