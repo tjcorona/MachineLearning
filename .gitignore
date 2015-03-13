@@ -2,3 +2,13 @@
 /bin*
 .bak
 .tmp
+.user
+.old
+.DS_store
+*.aux
+*.dvi
+*.log
+*.out
+*.synctex.gz
+*.bbl
+*.blg
